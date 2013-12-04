@@ -1,0 +1,28 @@
+table {
+    border-collapse: separate;
+    border-spacing: 60px 30px;
+}
+
+td {
+	border: 2px solid black;
+	padding: 20px;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+tr:first-child{
+	background-color: #FFFF44;
+}
+tr:last-child{
+	background-color: #44FFFF;
+}
+body {
+	font-family: arial,sans-serif;
+}
+button{
+	cursor: pointer;
+	font-size: 22px;
+	padding: 10px;
+	border-radius: 5px;
+}
