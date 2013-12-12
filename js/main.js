@@ -23,6 +23,7 @@ $( window ).load(function() {
 		e.preventDefault();
 		currentStep = (currentStep + 1) % steps.length;
 		steps[currentStep]();
+		items.removeClass('chosen');
 	});
 	steps[0]();
 
