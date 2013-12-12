@@ -6,14 +6,14 @@ $( window ).load(function() {
 
 	var steps = [function() {
 		modRow.hide();
-		btn.html('Draw modifiers');
+		btn.html('<span class="hotkey">D</span>raw modifiers');
 		foodRow.children().each(function(i,e){
 			$(e).html(food[Math.floor(Math.random()*food.length)]);
 		});
 	},
 	function() {
 		modRow.show();
-		btn.html('Redraw');
+		btn.html('<span class="hotkey">R</span>edraw');
 		modRow.children().each(function(i,e){
 			$(e).html(modifiers[Math.floor(Math.random()*modifiers.length)]);
 		});
@@ -26,6 +26,6 @@ $( window ).load(function() {
 	steps[0]();
 
 	$(document).keyup(function(e){
-		if(e.which === 82) btn.click();
+		if(e.which === 82 || e.which == 68) btn.click();
 	});
 });
