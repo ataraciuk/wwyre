@@ -3,6 +3,7 @@ $( window ).load(function() {
 	var foodRow = $('table').find('tr').last();
 	var modRow = $('table').find('tr').first();
 	var currentStep = 0;
+	var items = $('td');
 
 	var steps = [function() {
 		modRow.hide();
@@ -27,5 +28,12 @@ $( window ).load(function() {
 
 	$(document).keyup(function(e){
 		if(e.which === 82) btn.click();
+	});
+
+	items.click(function(){
+		items.removeClass('chosen');
+		var index = $(this).index();
+		$(foodRow.children().get(index)).addClass('chosen');
+		$(modRow.children().get(index)).addClass('chosen');
 	});
 });
