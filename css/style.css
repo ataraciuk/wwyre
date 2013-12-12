@@ -11,6 +11,9 @@ td {
 	margin-right: 10px;
 	border-radius: 5px;
 }
+tr {
+	cursor: pointer;
+}
 tr:first-child{
 	background-color: #FFFF44;
 }
